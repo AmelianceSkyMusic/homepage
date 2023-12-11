@@ -7,13 +7,14 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.5;
+	background-color: #101010;
 
-	--primary-text-color: #181820;
-	--secondary-text-color: #5c5c62;
-	--durability-text-color: #6a737d9c;
-	--icon-color: #6a737d;
-	--border-color: #ff9a0045;
-	--text-decoration-color: #ff9a00;
+	--primary-text-color: #f5f5f5;
+	--secondary-text-color: #bbb;
+	--durability-text-color: #bebebe9c;
+	--icon-color: #c0c0c0;
+	--border-color: #9e9e9e45;
+	--text-decoration-color: #fff;
 }
 
 .container {
@@ -36,22 +37,20 @@ body {
 
 .resume {
 	margin: 50px auto;
-	border: 1px solid #f5f5f5;
-	box-shadow: 1px 1px 7px 7px #f5f5f5;
 	padding: 30px 0;
 	max-width: 900px;
 }
 
 .resume__block {
-	border-bottom: 3px solid var(--border-color);
 	padding-bottom: 30px;
-	margin-bottom: 15px;
+	margin-bottom: 48px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (width <= 576px) {
 	.main-info,
 	.contact_info_container {
 		flex-direction: column;
+		row-gap: 48px;
 	}
 
 	.contact_info_container {
@@ -74,9 +73,7 @@ body {
 
 .contact-info__header {
 	color: var(--primary-text-color);
-	margin-bottom: 15px;
-	text-decoration-color: var(--text-decoration-color);
-	text-decoration-line: underline;
+	margin-bottom: 24px;
 }
 
 .contact-info__sub-header {
@@ -112,22 +109,11 @@ body {
 	justify-content: center;
 }
 
-.contact-info__item-icon path {
-	fill: var(--icon-color);
-}
-
-.contact-info__item-icon {
-	height: 1.1428rem;
-	vertical-align: text-bottom;
-}
-
 .contact-info__avatar {
 	border-radius: 50%;
 	width: 100px;
 	height: 100px;
 	object-fit: cover;
-	border: 3px solid;
-	border-color: var(--text-decoration-color);
 }
 
 .intro {
@@ -158,7 +144,6 @@ body {
 
 .skills__header {
 	color: var(--secondary-text-color);
-	text-align: center;
 	margin-bottom: 15px;
 }
 
@@ -221,7 +206,13 @@ body {
 }
 
 .additional-info__education {
-	margin-bottom: 20px;
+	margin-bottom: 48px;
+}
+
+.additional-info__education-content-wrapper {
+	display: flex;
+	flex-direction: column;
+	row-gap: 24px;
 }
 
 .additional-info__education-header {
@@ -257,6 +248,7 @@ body {
 	margin-bottom: 20px;
 }
 
-.additional-info__languages-item {
+.additional-info__languages-items {
 	color: var(--secondary-text-color);
+	list-style-type: none;
 }
